@@ -1,0 +1,22 @@
+.top {
+    border:2px solid red;
+}
+
+.left {
+    border:2px solid blue;
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+}
+
+.right {
+    border:2px solid purple;
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+}
+
+.container {
+    border:2px solid yellow;
+    text-align: left;
+}
