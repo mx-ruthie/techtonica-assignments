@@ -10,6 +10,5 @@ container.appendChild(btn);
 
 
 
-//<div id="more recipes">
 //resource used for syntax : https://stackoverflow.com/questions/49864972/manipulate-dom-with-js-add-button-link
 //<script type="text/javascript" src="recipe.js"></script>
