@@ -8,7 +8,7 @@ function headsOrTails(){
     return "tails";
   }
 }
-document.getElementById("click").onclick = headsOrTails;
+//document.getElementById("click").onclick = headsOrTails;
 
 let coinForm = document.getElementById("numcoins");
 
