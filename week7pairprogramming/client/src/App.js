@@ -1,13 +1,13 @@
 //import logo from './logo.svg';
 import './App.css';
-import Students from './components/students';
+import Weather from './components/weather';
+import React from 'react';
 
 function App() {
   return (
     <div className="App">
-      {/* <h1>Hello Techtonica</h1> */}
-      <Students school={"Hackbright"}/>
-      <Students school={"Techtonica"}/>
+      <h1>Weather Time</h1>
+      <Weather />
     </div>
   );
 }
