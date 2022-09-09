@@ -23,7 +23,7 @@ const Weather = (props) => {
           <p key={index}>
             Temp: {weather.current.temp} <br></br>
             Feels Like: {weather.current.feels_like}<br></br>
-            Pressure: {weather.current.humidity}<br></br>
+            Humidity: {weather.current.humidity}<br></br>
 
           </p>
           )
