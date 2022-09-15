@@ -1,33 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from "react";
+import Header from './components/instruction';
+import Category from './components/category';
 
-function Question(props) {
-  const {questionText} = props;
-  return(
-    <div>
-      {questionText}
-    </div>
-  )
-}
+const categories = ["Geography", "Entertainment", "History", "Art", "Science and Nature", "Sports and Leisure"];
 
+// categories.map((category) => {
+//   <Category name={category}/>
+//   }
+  
 
 function App() {
-  const [question, setQuestion] = useState("");
-  const [category, setCategory] = useState("Art");
-  useEffect(() => {
-      let promise = new Promise((resolve, reject) => {
-        fetch("https://opentdb.com/api.php?amount=1&category=25&type=multiple")
-          .then((response) => {return response.json()})
-          .then((data) => {
-            console.log(data.results[0].question)
-          setQuestion(data.results[0].question);
-          });
-      })
-  }, [category]); 
+  
   return (
     <div className="App">
-      <Question questionText={question}/>
+      <Header />
+      {/* <Question questionText={"Question goes here"}/> */}
+      {categories.map((category, index) => {
+        return(
+        <Category name={category} key={index}/>
+      )}
+      )}
+      
     </div>
   );
 }
