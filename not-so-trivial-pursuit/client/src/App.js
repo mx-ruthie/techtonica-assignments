@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import Header from './components/instruction';
 import Category from './components/category';
 
-const categories = ["Geography", "Entertainment", "History", "Art", "Science and Nature", "Sports and Leisure"];
+const categories = ["Geography", "Entertainment", "History", "Art", "Science", "Sports"];
 
 // categories.map((category) => {
 //   <Category name={category}/>
@@ -17,9 +17,9 @@ function App() {
     <div className="App">
       <Header />
       {/* <Question questionText={"Question goes here"}/> */}
-      {categories.map((category, index) => {
+      {categories.map((category) => {
         return(
-        <Category name={category} key={index}/>
+        <Category name={category} key={`${category}-btn`} className={`${category}-btn`}/>
       )}
       )}
       

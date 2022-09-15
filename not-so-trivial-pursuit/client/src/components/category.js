@@ -19,10 +19,10 @@ user input right or wrong? ^^^^^^^^^^ to App.js (parent) (callback)
 import {useState, useEffect} from "react";
 import QuestionRender from "./question-render";
 
-const Category = ({name}) => {
+const Category = ({name, className}) => {
   return(
     <>
-      <button>{name}</button>
+      <button className={className}>{name}</button>
     </>
   )
 }
