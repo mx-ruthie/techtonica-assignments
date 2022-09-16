@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 const RadioButton = ({answer, index, onValueChange}) => {
  let id = `${index}-choice`;
   return( 
@@ -8,12 +10,17 @@ const RadioButton = ({answer, index, onValueChange}) => {
 )};
 
 const QuestionRender = ({question}) => {
+  const[isRight, setIsRight] = useState(false);
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log(evt.target);
 }
   const onValueChange = (evt) => {
     console.log(evt.target.value);
+    console.log(evt.target.value===question.correct_answer);
+    if(evt.target.value===question.correct_answer){
+      setIsRight(true);
+    }
   }
   return (
     question && (
@@ -27,6 +34,9 @@ const QuestionRender = ({question}) => {
           <RadioButton answer={question.incorrect_answers[2]} onValueChange={onValueChange}/>
           <button type="submit">Submit Answer</button>
         </form>
+      </div>
+      <div>
+        {isRight && "Yay! Correct!" }
       </div>
 
     </div>)

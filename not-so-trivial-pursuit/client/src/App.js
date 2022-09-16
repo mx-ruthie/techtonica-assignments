@@ -18,7 +18,7 @@ function App() {
   const [category, setCategory] = useState("Art");
     useEffect(() => {
         let promise = new Promise((resolve, reject) => {
-          fetch("https://opentdb.com/api.php?amount=1&category=25&type=multiple")
+          fetch("http://localhost:8082/api/game")
             .then((response) => {return response.json()})
             .then((data) => {
               console.log(data.results[0])
