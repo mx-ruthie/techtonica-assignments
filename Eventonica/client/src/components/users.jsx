@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import DeleteUser from "./DeleteUser";
 
 const Users = () => {
 
@@ -24,6 +25,11 @@ const dory = { name: 'Dory', email: 'dory@gmail.com', id: '3' };
     setName("");
     setId("");
     setEmail("");
+  };
+
+  const deleteUser = (deleteId) => {
+    const newUsers = users.filter((i) => i.id !== deleteId);
+    setUsers(newUsers);
   };
 
   return <section className="user-management">
@@ -56,16 +62,7 @@ const dory = { name: 'Dory', email: 'dory@gmail.com', id: '3' };
               </form>
             </div>
 
-            <div>
-              <h3>Delete User</h3>
-              <form id="delete-user" action="#">
-                <fieldset>
-                  <label>User ID</label>
-                  <input type="text" id="delete-user-id" />
-                </fieldset>
-                <input type="submit" />
-              </form>
-            </div>
+            <DeleteUser />
           </section>
 };
 
