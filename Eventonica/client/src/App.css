@@ -18,7 +18,7 @@ fieldset {
 
 .users-div, .events-div{
   border: 2px solid black;
-  background-color: rgba(55, 0, 255, 0.276);
+  background-color: rgba(55, 0, 255, 0.174);
   padding: 30px;
   
 }
@@ -49,8 +49,9 @@ main {
   display: flex;
   justify-content: space-between;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: rgb(234, 197, 229);
-  text-shadow: 1px 1px rgb(5, 0, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px rgb(246, 175, 229);
+  font-weight: bold;
 }
 
 aside {
