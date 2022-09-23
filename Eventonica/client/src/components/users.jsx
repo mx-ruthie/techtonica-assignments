@@ -37,6 +37,7 @@ const dory = { name: 'Dory', email: 'dory@gmail.com', id: '3' };
   <h2>User Management</h2>
 
   <ul id="users-list">
+  <h3>All Users</h3>
   {users.map((user, index) => {
             return (
                 <li key={index}>
@@ -52,9 +53,15 @@ const dory = { name: 'Dory', email: 'dory@gmail.com', id: '3' };
                 <fieldset>
                   <label>Name: </label>
                   <input type="text" id="add-user-name" value={name} onChange={(e) => setName(e.target.value)} />
+                  <br />
+                  </fieldset>
                   {/* changing type to number creates a dropdown */}
+                  <fieldset>
                   <label>User ID: </label>
                   <input type="number" id="add-user-id" value={id} onChange={(e) => setId(e.target.value)}/>
+                  <br />
+                  </fieldset>
+                  <fieldset>
                   <label>Email: </label>
                   <input type="text" id="add-user-email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                 </fieldset>

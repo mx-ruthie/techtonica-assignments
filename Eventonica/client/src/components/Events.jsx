@@ -170,12 +170,12 @@ const Events = () => {
         <h3>Add Event</h3>
         <form id="add-event" action="#"  onSubmit={handleSubmit}>
           <fieldset>
-            <label>Name</label>
+            <label>Name: </label>
             <input
               type="text"
               value={state.name}
               id="add-event-name"
-              placeholder="Virtual corgi meetup"
+              placeholder="Name your event here"
               onChange={(e) =>
                 dispatch({
                   type: "editName",
@@ -187,7 +187,7 @@ const Events = () => {
             />
           </fieldset>
           <fieldset>
-            <label>ID</label>
+            <label>ID: </label>
             <input
               type="number"
               id="add-user-id"
@@ -201,7 +201,7 @@ const Events = () => {
             />
           </fieldset>
           <fieldset>
-            <label>Date</label>
+            <label>Date: </label>
             <input
               type="date"
               id="add-user-email"
@@ -215,7 +215,7 @@ const Events = () => {
             />
           </fieldset>
           <fieldset>
-            <label>Description</label>
+            <label>Description: </label>
             <input
               type="text"
               id="add-event-description"
@@ -229,7 +229,7 @@ const Events = () => {
             />
           </fieldset>
           <fieldset>
-            <label>Category</label>
+            <label>Category: </label>
             <input
               type="text"
               id="add-event-category"
@@ -251,7 +251,7 @@ const Events = () => {
         <h3>Delete Event</h3>
         <form id="delete-event" action="#" onSubmit={handleDelete}>
           <fieldset>
-            <label>Event ID</label>
+            <label>Event ID: </label>
             <input type="number" value={deleteId} min="1" id="delete-event-id" onChange={(e) => setDeleteId(e.target.value)}/>
           </fieldset>
           <input type="submit"/>
