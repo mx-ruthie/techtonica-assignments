@@ -8,34 +8,34 @@ import { useReducer } from "react";
 //and she allowed me to have her code to use in my project to move past this section
 
 // some sample events
+// moved the sample events to the back end
+// const event1 = {
+//   id: "1",
+//   name: "Birthday",
+//   date: "2021-09-01",
+//   description: "A birthday party for my best friend",
+//   category: "Celebration",
+// };
 
-const event1 = {
-  id: "1",
-  name: "Birthday",
-  date: "2021-09-01",
-  description: "A birthday party for my best friend",
-  category: "Celebration",
-};
+// const event2 = {
+//   id: "2",
+//   name: "Graduation",
+//   date: "2021-08-01",
+//   description: "The class of 2021 graduates from East High",
+//   category: "Education",
+// };
 
-const event2 = {
-  id: "2",
-  name: "Graduation",
-  date: "2021-08-01",
-  description: "The class of 2021 graduates from East High",
-  category: "Education",
-};
-
-const event3 = {
-  id: "3",
-  name: "JS Study Session",
-  date: "2021-10-01",
-  description: "A chance to practice Javascript interview questions",
-  category: "Education",
-};
+// const event3 = {
+//   id: "3",
+//   name: "JS Study Session",
+//   date: "2021-10-01",
+//   description: "A chance to practice Javascript interview questions",
+//   category: "Education",
+// };
 
 const Events = () => {
   //stores users in an array, initialized from hardcode
-  const [events, setEvents] = useState([event1, event2, event3]);
+  const [events, setEvents] = useState([]);
   //defining the intial state for the event
   const initialState = {
     id: "",
@@ -50,14 +50,20 @@ const Events = () => {
   console.log("events", eventList);
 
   const getEvents = () => {
-    fetch("http://localhost:3000/events")
+    fetch("http://localhost:8000/events")
       .then((res) => res.json())
-      .then((res) => setEventList(res.events));
+      .then((res) => {
+        //setEventList(res) this was leaving a blank screen so we setEvents instead and here we are
+        setEvents(res);
+        console.log("this is res", res);
+      });
+
   };
 
   useEffect(() => {
     // useEffect will run getUsers() every time this component loads, as opposed to just the first time it is rendered.
     getEvents();
+    console.log("hey I'm running");
   }, []);
 
   //must create the function because it's not pre-defined as useState is
@@ -88,7 +94,7 @@ const Events = () => {
     }
   };
   //creating the state object in the variable state (everything contstructed in reducer needs to be referenced using state.name, ect. )
-  const [state, dispatch] = React.useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
   //const [events, setEvents] = useState([]);
   //stores the user input into new user
   //   const [newEvent, setNewEvent] = useState({
