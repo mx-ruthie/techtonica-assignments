@@ -35,9 +35,9 @@ const dory = { name: 'Dory', email: 'dory@gmail.com', id: '3' };
 
   return <section className="user-management">
   <h2>User Management</h2>
-
-  <ul id="users-list">
   <h3>All Users</h3>
+  <ul id="users-list">
+ 
   {users.map((user, index) => {
             return (
                 <li key={index}>
