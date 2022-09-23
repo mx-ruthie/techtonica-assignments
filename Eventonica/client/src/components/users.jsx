@@ -19,6 +19,7 @@ const dory = { name: 'Dory', email: 'dory@gmail.com', id: '3' };
   const handleSubmit = (e) => {
     e.preventDefault();
     const newUser = { id: id, name: name, email: email };
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
     setUsers([...users, newUser]);
     console.log(users);
     //these next lines re-set the input fields to empty strings on submit
@@ -62,7 +63,7 @@ const dory = { name: 'Dory', email: 'dory@gmail.com', id: '3' };
               </form>
             </div>
 
-            <DeleteUser />
+            <DeleteUser deleteUser={deleteUser}/>
           </section>
 };
 

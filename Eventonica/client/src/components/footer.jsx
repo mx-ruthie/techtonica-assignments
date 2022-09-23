@@ -4,11 +4,12 @@ return(
 
 <footer>
 <div>
-  Star Calendar favicon made by
+ 
+  Star Calendar favicon made by{' '}
   <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-    Freepik
+  {' '}Freepik{' '}
   </a>
-  Find your own on
+  {' '}Find your own on{' '}
   <a href="https://www.flaticon.com/" title="Flaticon">
     FlatIcon.com
   </a>

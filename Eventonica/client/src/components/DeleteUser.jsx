@@ -1,18 +1,30 @@
 import { useState } from "react";
 
-const DeleteUser = () => {
-  const [deleteId, setDeleteId] = useState("");
-  return(
-  <div>
-              <h3>Delete User</h3>
-              <form id="delete-user" action="#">
-                <fieldset>
-                  <label>User ID</label>
-                  <input type="text" id="delete-user-id" />
-                </fieldset>
-                <input type="submit" />
-              </form>
-            </div>
-)};
+const DeleteUser = ({ deleteUser }) => {
+  const [id, setId] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    deleteUser(id);
+    setId("");
+    // resets the field to empty after delete is executed
+  };
+  return (
+    <div>
+      <h3>Delete User</h3>
+      <form id="delete-user" action="#" onSubmit={handleSubmit}>
+        <fieldset>
+          <label>User ID</label>
+          <input
+            type="text"
+            id="delete-user-id"
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+          />
+        </fieldset>
+        <input type="submit" />
+      </form>
+    </div>
+  );
+};
 
 export default DeleteUser;
