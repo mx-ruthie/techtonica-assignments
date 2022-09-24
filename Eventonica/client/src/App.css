@@ -1,0 +1,90 @@
+body {
+  background-image: url("https://www.autostraddle.com/wp-content/uploads/2017/06/shutterstock_499291237.jpg?w=1000");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 100%;
+  padding: 30px;
+  text-shadow: #333;
+}
+fieldset {
+  border: none;
+  margin: 1rem 0;
+  
+  
+}
+.divClass{
+  padding-top: 70px;
+}
+
+.users-div, .events-div{
+  border: 2px solid black;
+  background-color: rgba(55, 0, 255, 0.174);
+  padding: 30px;
+  
+}
+
+.events-div{
+  margin-left: 550px;
+}
+.users-div{
+  width: 500px;
+
+}
+header {
+  /* For more about flexbox, see https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+  display: flex;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 1px 1px rgb(176, 28, 199);
+}
+
+header img {
+  height: 64px;
+  margin-right: 1em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px rgb(246, 175, 229);
+  font-weight: bold;
+}
+
+aside {
+  margin-left: 2em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow:  1px 1px rgb(220, 202, 202);
+}
+
+footer {
+  
+  margin-top: 1rem;
+  font-size: small;
+  color: gray;
+  text-align: center; 
+  /* centers the footer */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+}
+
+input[type=submit] {
+  padding:5px 15px; 
+  background:#ccc; 
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 1px 1px rgb(220, 202, 202);
+ 
+}
+
+input[type=text]:focus {
+  border-color:#333;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 1px 1px rgb(220, 202, 202);
+}
